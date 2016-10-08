@@ -5,10 +5,11 @@ package Interfaces;
  */
 
 public interface AbstractMultiUserCounterFactory {
-     int createMultiUserCounter(String counterId, String counterPassword, String counterName,
+     Counter createMultiUserCounter(String counterId, String counterPassword, String counterName,
                                       double value, double step, String unit);
      boolean isCounterIdAvailable(String counterId);
      boolean isCounterIdLegal(String counterId);
      boolean isAbleToAddMultiUserCounter(String counterId, String counterPassword);
-     int addMultiUserCounter(String counterId, String counterPassword);
+     Counter addMultiUserCounter(String counterId, String counterPassword);
+     int deleteCounter(String counterId);
 }

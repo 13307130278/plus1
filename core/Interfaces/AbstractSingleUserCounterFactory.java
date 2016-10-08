@@ -5,5 +5,5 @@ package Interfaces;
  */
 
 public interface AbstractSingleUserCounterFactory {
-    int createSingleUserCounter(String counterName, double value, double step, String unit);
+    Counter createSingleUserCounter(String counterName, double value, double step, String unit);
 }

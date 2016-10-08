@@ -17,30 +17,31 @@ public interface AbstractSystem {
 
         // multi user
      int createMultiUserCounter(String counterId, String counterPassword, String counterName,
-                                      double value, double step, String unit);
-     boolean isCounterIdAvailable(String counterId);
-     boolean isCounterIdLegal(String counterId);
-     boolean isAbleToAddMultiUserCounter(String counterId, String counterPassword);
-     int addMultiUserCounter(String counterId, String counterPassword);
+                                double value, double step, String unit);
+    boolean isCounterIdAvailable(String counterId);
+    boolean isCounterIdLegal(String counterId);
+    boolean isAbleToAddMultiUserCounter(String counterId, String counterPassword);
+    int addMultiUserCounter(String counterId, String counterPassword);
 
     // count
-     int count(String counterId);
-     int count(String counterId, boolean isMinus);
+    int count(String counterId);
+    int count(String counterId, boolean isMinus);
 
     // delete
-     int deleteCounter(String counterId);
+    int deleteCounter(String counterId);
 
     // backup
-     int backup();
+    int backup();
 
     // change counter info
-     int changeCounterInfo(String counterId, String newCounterName, double value, double step, String unit);
+    int changeCounterInfo(String counterId, String newCounterName, double value, double step, String unit);
 
     // getter of Counters
-     List<Counter> getCounters();
+    List<Counter> getCounters();
 
     // gettor of username
-     String getUsername();
+    String getUsername();
 
     // others
+    boolean isCounterCreatedByMe(String counterId);
 }

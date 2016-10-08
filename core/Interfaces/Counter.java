@@ -5,23 +5,25 @@ package Interfaces;
  */
 public interface Counter {
     // setter
-     int setCounterInfo
-    (String counterName, double value, double step, String unit, String creator);
+    int setCounterInfo
+    (String counterName, double value, double step, String unit);
 
     // when looking for some counter
-     boolean isThisCounter(String counterName, String creatorName);
+    boolean isThisCounter(String CounterId);
 
     // getters
-     String getCounterName();
-     double getValue();
-     double getStep();
-     String getUnit();
-     String getCreator();
+    String getCounterName();
+    double getValue();
+    double getStep();
+    String getUnit();
+    String getCreator();
+    String getCounterId();
 
     // count
-     int count();
-     int count(boolean isMinus);
+    int count();
+    int count(boolean isMinus);
 
     // others
-     boolean isSingleUserMode();
+    boolean isSingleUserMode();
+    boolean isCreatedBy(String username);
 }
