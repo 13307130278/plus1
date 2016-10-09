@@ -23,7 +23,7 @@ class MultiUserCounterFactory implements AbstractMultiUserCounterFactory {
 
     @Override
     public boolean isCounterIdLegal(String counterId) {
-        return counterId.matches("[a-zA-Z0-9]+");
+        return counterId.matches("[a-zA-Z0-9]+[_]*[a-zA-Z0-9]*");
     }
 
     @Override

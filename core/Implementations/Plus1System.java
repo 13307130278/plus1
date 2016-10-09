@@ -5,6 +5,9 @@ package Implementations;
 import java.util.ArrayList;
 import java.util.List;
 import Interfaces.*;
+import Kits.Finals;
+import org.jetbrains.annotations.Nullable;
+import org.junit.Test;
 
 public class Plus1System implements AbstractSystem {
     private List<Counter> counters = new ArrayList<>();
@@ -21,6 +24,7 @@ public class Plus1System implements AbstractSystem {
         counters.add(counter);
         return 0;
     }
+    @Nullable
     private Counter findCounter(String counterId) {
         for (Counter counter : counters) {
             if (counter.isThisCounter(counterId)) {
@@ -43,7 +47,7 @@ public class Plus1System implements AbstractSystem {
     @Override
     public int signIn(String username, String password) {
         int signInResult = UserProcessor.getInstance().signIn(username, password);
-        if (signInResult == UserProcessor.SIGN_IN_SECCEEDED) {
+        if (signInResult == Finals.SIGN_IN_SECCEEDED) {
             this.username = username;
         }
         return signInResult;
