@@ -29,7 +29,11 @@ class SingleUserCounter implements Counter{
 
     @Override
     public int count(boolean isMinus) {
-        value += isMinus ? -step : step;
+        if (isMinus) {
+            value -= step;
+        } else {
+            value += step;
+        }
         return 0;
     }
     @Override
