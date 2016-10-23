@@ -17,7 +17,7 @@ class BackupManager implements AbstractBackupManager {
     private BackupManager() {
     }
     public int backup() {
-        List<Counter> counters = Plus1System.getInstance().getCounters();
+        List<Counter> counters = Implementations.Plus1System.getInstance().getCounters();
         // TODO
         return 0;
     }
