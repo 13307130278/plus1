@@ -6,7 +6,6 @@ import org.junit.*;
  * Created by billlai on 08/Oct/2016.
  */
 public interface AbstractSystem {
-
     // user
      int createUser(String username, String password);
      boolean isUsernameAvailable(String username);
